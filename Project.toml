@@ -1,7 +1,7 @@
 name = "CryptoMiniSat"
 uuid = "8e9d5576-ec03-11e9-187e-e534548435ab"
 authors = ["Laurent Bartholdi <laurent.bartholdi@gmail.com>"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 CryptoMiniSat_jll = "cf02a7a8-8cd0-5932-97be-477f95a4d9ce"
