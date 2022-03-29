@@ -1,15 +1,12 @@
 module CryptoMiniSat
 
+import CryptoMiniSat_jll
+
 export Lit, CMS, new_vars, nvars, add_clause, add_xor_clause, solve, get_model, get_conflict, itersolve
 
 import Base: show, convert, iterate, IteratorSize
 
-const depspath = joinpath(dirname(@__FILE__), "..", "deps", "deps.jl")
-if !isfile(depspath)
-    error("CryptoMiniSat is not installed properly, run Pkg.build(\"CryptoMiniSat\") and restart Julia.")
-end
-include(depspath)
-check_deps()
+const libcms = CryptoMiniSat_jll.libcryptominisat5
 
 const L_TRUE = 0x00
 const L_FALSE = 0x01

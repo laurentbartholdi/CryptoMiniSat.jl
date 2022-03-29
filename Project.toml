@@ -4,11 +4,10 @@ authors = ["Laurent Bartholdi <laurent.bartholdi@gmail.com>"]
 version = "0.1.0"
 
 [deps]
-BinaryProvider = "b99e7846-7c00-51b0-8f62-c81ae34c0232"
-Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+CryptoMiniSat_jll = "cf02a7a8-8cd0-5932-97be-477f95a4d9ce"
 
 [compat]
-julia = "1"
+julia = ">=1.6"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
