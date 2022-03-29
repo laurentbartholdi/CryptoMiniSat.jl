@@ -2,6 +2,8 @@ module CryptoMiniSat
 
 import CryptoMiniSat_jll
 
+using Aqua
+
 export Lit, CMS, new_vars, nvars, add_clause, add_xor_clause, solve, get_model, get_conflict, itersolve
 
 import Base: show, convert, iterate, IteratorSize

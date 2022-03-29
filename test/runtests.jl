@@ -1,5 +1,8 @@
 using CryptoMiniSat
+using Aqua
 using Test
+
+Aqua.test_all(CryptoMiniSat, deps_compat = true)
 
 @testset "Low-level CryptoMiniSat" begin
     p = CryptoMiniSat.cms_new()
