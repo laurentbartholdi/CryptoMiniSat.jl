@@ -4,7 +4,7 @@ This is a user interface, in Julia, to the [CryptoMiniSat](https://github.com/ms
 
 It exposes all the functions of the C interface, in the same syntax (cmsat_new, etc.), and provides higher-level interfaces:
 - the same functions as in the C interface, without `cmsat_`, accept 1-based variables of any integer type (rather than the 0-based UInt32)
-- a high-level `solve(clauses; ...)` function that accepts a vector of vectors of clauses, represented as integers (negative for negated terms) for one-go solving, as well as an iterator `itersolve(clauses; ...)`
+- a high-level `solve(clauses; ...)` function that accepts a vector of clauses, each a vector of terms represented as integers (negative for negated terms) for one-go solving, as well as an iterator `itersolve(clauses; ...)`
 - a higher-level `solve(clauses; ...)` in which the terms of the clauses are `Lit(x)`, `NotLit(x)` or generally `Lit(x,negated::Bool)` for usual clauses, and `x` may be of any type; or the terms are of the form `XorLit(x)` and `XNorLit(x)` for XOR-clauses, in which the number of non-satisfied terms should have the same parity as the number of XNorLit terms.
 
 ```julia
