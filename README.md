@@ -1,6 +1,6 @@
 # CryptoMiniSat
 
-This is a user interface, in Julia, to the [CryptoMiniSat|https://github.com/msoos/cryptominisat] SAT solver.
+This is a user interface, in Julia, to the [CryptoMiniSat](https://github.com/msoos/cryptominisat) SAT solver.
 
 It exposes all the functions of the C interface, in the same syntax (cmsat_new, etc.), and provides higher-level interfaces:
 - the same functions as in the C interface, without `cmsat_`, accept 1-based variables of any integer type (rather than the 0-based UInt32)
