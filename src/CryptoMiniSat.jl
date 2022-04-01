@@ -402,7 +402,7 @@ If the problem is not satisfiable the method returns an `:unsatisfiable` symbol.
 ```julia
 julia> import CryptoMiniSat
 julia> # coffee with cream, tea with milk
-julia> cnf = [[XorLit(:coffee),XorLit(:tea)],[NotLit(:coffee),Lit(:cream)],[NotLit(:tea),Lit(:milk)]]
+julia> cnf = [[XorLit(:coffee),XorLit(:tea)],[NotLit(:coffee),Lit(:cream)],[NotLit(:tea),Lit(:milk)]];
 julia> CryptoMiniSat.solve(cnf)
 Dict{Symbol, Bool} with 3 entries:
   :cream  => 0
@@ -446,7 +446,7 @@ Returns an iterable object over all solutions.
 ```julia
 julia> import CryptoMiniSat
 julia> # coffee with cream, tea with milk
-julia> cnf = [[XorLit(:coffee),XorLit(:tea)],[NotLit(:coffee),Lit(:cream)],[NotLit(:tea),Lit(:milk)]]
+julia> cnf = [[XorLit(:coffee),XorLit(:tea)],[NotLit(:coffee),Lit(:cream)],[NotLit(:tea),Lit(:milk)]];
 julia> collect(CryptoMiniSat.itersolve(cnf))
 4-element Vector{Any}:
  Dict{Symbol, Bool}(:cream => 0, :milk => 1, :tea => 1, :coffee => 0)

@@ -19,7 +19,7 @@ julia> solve(cnf)
  -4
  -5
 julia> # coffee with cream, tea with milk
-julia> cnf = [[XorLit(:coffee),XorLit(:tea)],[NotLit(:coffee),Lit(:cream)],[NotLit(:tea),Lit(:milk)]]
+julia> cnf = [[XorLit(:coffee),XorLit(:tea)],[NotLit(:coffee),Lit(:cream)],[NotLit(:tea),Lit(:milk)]];
 julia> collect(itersolve(cnf))
 4-element Vector{Any}:
  Dict{Symbol, Bool}(:cream => 0, :milk => 1, :tea => 1, :coffee => 0)
